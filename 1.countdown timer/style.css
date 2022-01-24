@@ -19,18 +19,14 @@ body {
     align-items: center;
     justify-content: center;
     background:#E6ECF2;
-    /* width: 53.05vw; */
-    /* height: 75.75vh; */
-    height: 80vh;
-    width: 100vw;
+    width: 53.05vw;
+    height: 75.75vh;
     
 }
 .timer_body{
     background-color: #FAFCFB;
-    /* height: 63.13vh; */
-    /* width: 44.27vw; */
-    height: 60vh;
-    width: 100vw;
+    height: 63.13vh;
+    width: 44.27vw;
     border-radius: 5px;
     border:#979797;
     padding: 2rem;
