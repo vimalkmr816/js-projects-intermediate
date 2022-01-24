@@ -1,9 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #EEF1F4;
+    
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#E6ECF2;
+    /* width: 53.05vw; */
+    /* height: 75.75vh; */
+    height: 80vh;
+    width: 100vw;
+    
+}
+.timer_body{
+    background-color: #FAFCFB;
+    /* height: 63.13vh; */
+    /* width: 44.27vw; */
+    height: 60vh;
+    width: 100vw;
+    border-radius: 5px;
+    border:#979797;
+    padding: 2rem;
+    margin: 2rem;
+    background-blend-mode: normal;
+    box-shadow: 0px 28px 25px rgba(107,128,148,0.18);
+    display: flex;
+    flex-direction: column;
+    
+}
+.timer_body h1{
+    text-align: center;
+    margin: 4rem;
+}
+.timer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.units_num{
+    font-size: 3rem;
+}
+.units_text{
+    text-align: center;
 }
