@@ -14,12 +14,14 @@
 
 <body>
     <!-- start page -->
-    <!-- <div class="container">
-        <button id="start_btn" class="btn-light border-0 text-primary">Start Quiz</button>
-    </div> -->
+    <section id="start_section" class="active container  p-2 ">
+        <button id="start_btn" class="btn-light border-0 w-auto text-primary">Start Quiz</button>
+    </section>
+
+
     <!-- rules page -->
 
-    <!-- <div class="container">
+    <section id="rules_section" class=" container py-3">
         <div class="header py-3 fs-4 fw-bold">
             <div class="page_title">Some Rules of this Quiz</div>
         </div>
@@ -33,15 +35,15 @@
         </div>
         <hr>
         <div class="footer float-end">
-            <button class="btn-light  px-3 py-2 rounded-3  border border-primary" id="continue_btn"> Exit
+            <button class="btn-light  px-3 py-2 rounded-3  border border-primary btn-light" id="exit_btn"> Exit
                 Quiz</button>
-            <button class="btn-primary px-3 py-2 rounded-3 border-0" id="exit_btn">Continue </button>
+            <button class="btn-primary px-3 py-2 rounded-3 border-0" id="continue_btn">Continue </button>
         </div>
-    </div> -->
+    </section>
 
     <!-- questions page -->
 
-    <!-- <div class="container">
+    <div id="qna_section" class="container">
         <div class="header py-3 d-flex justify-content-between align-items-center">
             <div class="page_title fs-4 fw-bold">Awesome Quiz Application</div>
             <div class="remaining_time fs-6 fw-bold bg-primary bg-opacity-10 p-2 rounded text-primary ">Time :
@@ -52,21 +54,17 @@
         <div class="qna_section main">
             <p class="question fs-3 fw-bold">1. What does HTML stand for?</p>
             <button
-                class="ans py-2 d-block  w-100 text-start m-2 border border-1 rounded-2 border border-primary bg-primary bg-opacity-10">Hyper
-                Text
-                Preprocessor</button>
+                class="ans py-2 d-block  w-100 text-start m-2 border border-1 rounded-2 border border-primary bg-primary bg-opacity-10"
+                id="ans1_btn">HyperText Preprocessor</button>
             <button
-                class="ans py-2 d-block w-100 text-start m-2 border border-1 rounded-2 border border-primary bg-primary bg-opacity-10">Hyper
-                Text Markup
-                Language</button>
+                class="ans py-2 d-block w-100 text-start m-2 border border-1 rounded-2 border border-primary bg-primary bg-opacity-10"
+                id="ans2_btn">HyperText Markup Language</button>
             <button
-                class="ans py-2 d-block w-100 text-start m-2 border border-1 rounded-2 border border-primary bg-primary bg-opacity-10">Hyper
-                Text Multiple
-                Language</button>
+                class="ans py-2 d-block w-100 text-start m-2 border border-1 rounded-2 border border-primary bg-primary bg-opacity-10"
+                id="ans3_btn">HyperText Multiple Language</button>
             <button
-                class="ans py-2 d-block w-100 text-start m-2 border border-1 rounded-2 border border-primary bg-primary bg-opacity-10">Hyper
-                Tool Multi
-                Language</button>
+                class="ans py-2 d-block w-100 text-start m-2 border border-1 rounded-2 border border-primary bg-primary bg-opacity-10"
+                id="ans4_btn">HyperTool Multi Language</button>
         </div>
         <hr>
         <div class="footer my-4 d-flex align-items-center justify-content-between">
@@ -75,19 +73,28 @@
                 <span class="total_ques fw-bold">5</span> Questions
             </div>
             <button class="float-end btn-primary px-3 py-2 border-0 rounded-2">Next Question</button>
-        </div> -->
-
-    <!-- completion page -->
-
-    <div class="container d-flex flex-column align-items-center justify-content-between">
-        <i class="fas fa-crown w-100 fs-1 text-primary"></i>
-        You've completed the Quiz!😎
-        You got 3 on 5
-        <div class="buttons d-flex p-5 gap-5">
-            <button class="btn-primary btn-primary px-3 py-2 border-0 rounded-2" id="replay_btn"> Replay
-                Quiz</button>
-            <button class="btn-primary btn-primary px-3 py-2 border-0 rounded-2" id="quit_btn"> Quit Quiz</button>
         </div>
+
+        <!-- completion page -->
+
+        <section class="container" id="result_section">
+            <div class="d-flex  flex-column  justify-content-between h align-items-center p-3">
+                <div class="icon">
+                    <i class="fas fa-crown w-100 text-primary"></i>
+                </div>
+                <div class="completion_text">
+                    <p>
+                        You've completed the Quiz!😎
+                        You got 3 on 5
+                    </p>
+                </div>
+                <div class="buttons d-flex gap-5">
+                    <button class="btn-primary btn-primary px-3 py-2 border-0 rounded-2" id="restart_btn"> Replay
+                        Quiz</button>
+                    <button class="btn-primary btn-primary px-3 py-2 border-0 rounded-2" id="quit_btn"> Quit
+                        Quiz</button>
+                </div>
+        </section>
     </div>
 
 
