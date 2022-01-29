@@ -6,7 +6,7 @@ const rulesSection = document.getElementById('rules_section');
 const qnaSection = document.getElementById('qna_section');
 const resultSection = document.getElementById('result_section');
 
-//grabbing all buttons 
+//grabbing all buttons
 const startBtn = document.getElementById('start_btn');
 const continueBtn = document.getElementById('continue_btn');
 const exitBtn = document.getElementById('exit_btn');
@@ -21,52 +21,52 @@ const restartBtn = document.getElementById('restart_btn');
 const quitBtn = document.getElementById('quit_btn');
 
 //moving to rules section
+let index = 0;
 
 renderQuiz();
 
 function renderQuiz() {
-    startQuiz();
+    startBtn.addEventListener("click", () => {
+        startSection.classList.remove('active');
+        rulesSection.classList.add('active');
+        startQuiz();
+    })
 }
 
 function startQuiz() {
-    startBtn.addEventListener("click", () => {
-        rulesSection.classList.add('active');
-        startSection.classList.remove('active');
-        renderQuestions();
-    })
-}
-
-function renderQuestions() {
-    //moving to qna section
     continueBtn.addEventListener("click", () => {
+        rulesSection.classList.remove('active')
         qnaSection.classList.add('active');
-        rulesSection.classList.remove('active');
-        // console.log(questions[0].answer);
-        // console.log(clicked(answers[0]));
-        questions.forEach(curQue => {
-            quest.innerHTML = curQue.question;
-            ans1.innerHTML = curQue.options[0];
-            ans2.innerHTML = curQue.options[1];
-            ans3.innerHTML = curQue.options[2];
-            ans4.innerHTML = curQue.options[3];
-            // console.log(curQue.numb);
-            // answers.forEach(ans => {
-            //     clicked(ans);
-            //     if (clicked(ans) === questions[curQue].answer) {
-            //         // renderNextQuestion();
-            //         console.log(ans, "congrats");
-            //     }
-            // });
-        })
+        renderQuestion(index);
+    });
+}
+function renderQuestion(index) {
+    //remove next btn until ans is selected 
+    quest.innerHTML = questions[index].question;
+    ans1.innerHTML = questions[index].options[0];
+    ans2.innerHTML = questions[index].options[1];
+    ans3.innerHTML = questions[index].options[2];
+    ans4.innerHTML = questions[index].options[3];
+    answers.addEventListener('click', () => {
+        nextBtn.classList.add("active")
     })
 }
-// function renderNextQuestion()
+nextBtn.addEventListener("click", function () {
+    console.log(index, questions.length - 1);
+    index++;
+    if (index <= questions.length - 1)
+        renderQuestion(index);
+    else {
+        resultSection.classList.add("active");
+        qnaSection.classList.remove("active")
+    }
+})
+function startTimer() {
 
-function clicked(curBtn) {
-    // document.
-    curBtn.addEventListener('click', (e) => {
-        // console.log(curBtn, "this is my answer");
-        return (e.target);
-    })
-    // return 0;
+}
+function timerAnimation() {
+
+}
+function checkAns() {
+
 }
