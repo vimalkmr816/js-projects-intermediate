@@ -9,19 +9,19 @@ const startBtn = document.getElementById("start_btn");
 const continueBtn = document.getElementById("continue_btn");
 const exitBtn = document.getElementById("exit_btn");
 const quest = document.querySelector(".question");
-const answers = document.querySelectorAll(".ans");
-const ans1 = document.getElementById("ans1_btn");
-
-const ans2 = document.getElementById("ans2_btn");
-const ans3 = document.getElementById("ans3_btn");
-const ans4 = document.getElementById("ans4_btn");
+const answersAll = document.querySelectorAll("button[id^=ans]");
+const ansSection = document.getElementById("ans_section");
+const ans1 = document.getElementById("ansa_btn");
+const ans2 = document.getElementById("ansb_btn");
+const ans3 = document.getElementById("ansc_btn");
+const ans4 = document.getElementById("ansd_btn");
 const nextBtn = document.getElementById("next_btn");
 const restartBtn = document.getElementById("restart_btn");
 const quitBtn = document.getElementById("quit_btn");
 
 //moving to rules section
 let index = 0;
-
+let score = 0;
 renderQuiz();
 
 function renderQuiz() {
@@ -46,12 +46,9 @@ function renderQuestion(index) {
 	ans2.innerHTML = questions[index].options[1];
 	ans3.innerHTML = questions[index].options[2];
 	ans4.innerHTML = questions[index].options[3];
-	answers.addEventListener("click", () => {
-		nextBtn.classList.add("active");
-	});
+	checkAns();
 }
 nextBtn.addEventListener("click", function () {
-	console.log(index, questions.length - 1);
 	index++;
 	if (index <= questions.length - 1) renderQuestion(index);
 	else {
@@ -59,6 +56,23 @@ nextBtn.addEventListener("click", function () {
 		qnaSection.classList.remove("active");
 	}
 });
-function startTimer() {}
-function timerAnimation() {}
-function checkAns() {}
+// function startTimer() {}
+// function timerAnimation() {}
+function checkAns() {
+	answersAll.forEach((curAns) => {
+		curAns.addEventListener("click", (e) => {
+			console.log(e);
+			console.log(e.target.innerHTML);
+			nextBtn.classList.toggle("active");
+			if (e.target.innerHTML === questions[index].answer) {
+				score++;
+				console.log(score, "corect");
+			}
+		});
+	});
+}
+restartBtn.addEventListener("click", () => {
+	index = 0;
+	score = 0;
+	renderQuestion();
+});

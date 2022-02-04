@@ -24,3 +24,9 @@ body {
 .container.active {
 	display: block;
 }
+#next_btn {
+	display: none;
+}
+#next_btn.active {
+	display: block;
+}
