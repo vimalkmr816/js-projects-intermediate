@@ -4,20 +4,108 @@
 }
 
 body {
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-family: Inter;
 	margin: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	background-color: #7bdaf3;
+	background-color: #a2e7fa;
 }
-body.dark_mode {
+.main_container {
+	background: white;
+	/* box-shadow: 1px 1px 50px 1px #aaaaaa8f; */
+	border-radius: 0.3rem;
+}
+.inner_container {
+	margin: 1rem;
+}
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.left_side {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.control_btn {
+	padding: 0.2rem 0.5rem;
+	margin: 0.5rem;
+	border-radius: 0.2rem;
+	background-color: #a2dd51;
+	cursor: pointer;
+}
+.control_btn:hover {
+	background-color: #94c452;
+	transition: all 0.3s ease-in-out;
+}
+.control_btn > i {
+	color: azure;
+}
+.main_text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.note_area_title {
+	margin: 1rem;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+.note_area_title + textarea {
+	border: none;
+	/* background: whitesmoke; */
+}
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.save_btn {
+	color: azure;
+	background: #a2dd51;
+	width: 15rem;
+	height: 3rem;
+	border: none;
+	border-radius: 50px;
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	margin: 1rem;
+	margin-bottom: 0rem;
+}
+.save_btn:hover {
+	background-color: #bef375;
+	transition: all 0.1s ease-in-out;
+}
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #000;
+	position: relative;
+	padding: 1rem;
+}
+.menu > button {
+	margin: 0.5rem;
+}
+.menu .close_menu_btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+/* body.dark_mode {
 	background-color: #416f7c;
 }
-i {
-	color: #a2dd51;
+.control_btn > i {
+	color: whitesmoke;
 	cursor: pointer;
+}
+.header {
+	padding-top: 0.7rem;
 }
 #main.dark_mode {
 	box-shadow: 0 0 50px -5px #aaaaaab0;
@@ -31,11 +119,17 @@ i {
 	font: bold;
 	max-width: 400px;
 	min-height: 300px;
-	border-radius: 2px;
+	border-radius: 10px;
 }
 #main.dark_mode {
 	background: #363636;
 	color: whitesmoke;
+}
+.control_btn {
+	background-color: #a2dd51;
+	margin: 0.2rem;
+	padding: 0 0.3rem;
+	border-radius: 5px;
 }
 .save_btn {
 	color: whitesmoke;
@@ -51,6 +145,9 @@ i {
 	font-size: 1.3rem;
 	box-shadow: 0 0 10px -2px #a2dd51;
 	margin: 1rem;
+}
+.note_inp {
+	background: rgba(0, 0, 0, 0.027);
 }
 .menu_field {
 	display: none;
@@ -79,7 +176,15 @@ i {
 	font-size: 1.3rem;
 	padding: 0.5rem 2rem;
 }
-
+.close_menu_btn {
+	position: absolute;
+	padding: 0 0.3rem;
+	left: 252px;
+	top: 11px;
+	border: none;
+	border-radius: 5px;
+	background: #a2dd51;
+}
 .close_btn.dark_mode {
 	position: relative;
 	padding: 0 0.3rem;
@@ -96,4 +201,4 @@ i {
 i.dark_mode {
 	border: none;
 	color: white;
-}
+} */

@@ -11,47 +11,44 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="dark_mode">
+<body class="">
     <!-- <h1>Hello Poppers</h1> -->
-    <main class="container dark_mode" id="main">
-        <div class="p-2 d-flex flex-column ">
-            <div class="row header d-flex justify-content-between pt-1">
-                <div class="left_side col-3 d-flex ">
-                    <div class="menu_icon">
-                        <i class="bi bi-three-dots " id="edit_btn"></i>
+    <main class="main_container" id="main">
+        <div class="inner_container">
+            <div class="header">
+                <div class="left_side">
+                    <div class="control_btn" title="New Note">
+                        <i class="bi bi-plus-lg" id="add_btn"></i>
                     </div>
-                    <div class="add_icon">
-                        <i class="bi bi-plus-lg ms-2" id="add_btn"></i>
+                    <div class="control_btn" title="Edit Note">
+                        <i class="bi bi-pencil-square" id="edit_btn"></i>
                     </div>
-                    <div class="settings_icon">
-                        <i class="bi bi-gear-fill ms-2" id="menu_btn"></i>
+                    <div class="control_btn" title="Settings">
+                        <i class="bi bi-gear-fill" id="menu_btn"></i>
                     </div>
                 </div>
-                <div class="col-1 right_side text-end">
-                    <div class="close_icon ">
-                        <i class="bi bi-x-lg" id="close_btn"></i>
+                <div class="right_side">
+                    <div class="control_btn" title="Delete Note">
+                        <i class="bi bi-x-lg" id="close_icon"></i>
                     </div>
                 </div>
             </div>
-            <div class="row p-4 pt-4 pb-0">
-                <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora ratione dolorem quasi pariatur earum
-                atque asperiores quisquam quas dicta libero eligendi nostrum ipsa dolor ad ipsum optio illo, eius
-                fugiat? -->
-                <span type="text" class="note_inp bg-dark border border-0" id="note_input" contenteditable></span>
+            <div class="main_text">
+                <span class="note_area_title">Write down some notes!!</span>
+                <span id="note_inp"></span>
             </div>
-            <div class="row">
-                <button class="save_btn col-7 mx-auto p-2 mt-5 border-0 dark_mode" id="save_btn">
+            <div class="footer">
+
+                <button class="save_btn" id="save_btn">
                     SAVE
                 </button>
             </div>
         </div>
         <div class="menu_field" id="menu_field">
-            <button class="close_btn dark_mode" id="close_menu_btn"><i class="bi bi-x"></i></button>
-            <div class="reset p-2 ps-0">
-                <button>Delete all Notes</button>
-            </div>
-            <div class="dark p-2 ps-0">
-                <button>Dark Mode</button>
+            <div class="menu">
+                <button class="close_menu_btn" id="close_menu_btn"><i class="bi bi-x"></i></button>
+                <button id="del_all_notes">Delete all Notes</button>
+                <button id="dark_mode">Dark Mode</button>
             </div>
         </div>
     </main>
