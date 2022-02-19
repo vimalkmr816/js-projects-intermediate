@@ -12,9 +12,9 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="bg-dark">
     <!-- navbar -->
-    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-bottom-3 border-bottom-secondary">
         <div class="container my-3">
             <a class="navbar-brand" href="#"><img src="./images/output-onlinepngtools.png" width="200px" alt="company_logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,11 +57,12 @@
     </nav>
     <!-- hero container -->
     <div class="container p-0 hero_container d-flex align-items-center justify-content-between">
-        <div class="hero_text ps-4 ms-4">
+        <div class="hero_text ps-4 ms-4 text-light">
             <p class="fw-bold fs-1 w-75">Stream Free Movies With Moviefy.</p>
             <p class="w-75">Stop searching for free movie websites and watch Moviefy now.</p>
-            <button class="border border-0 bg-warning text-light fw-bold  p-3 rounded-3 mt-4 mb-0">Start
-                Streaming</button>
+            <button class="border border-0 bg-success fw-bold  p-3 rounded-3 mt-4 mb-0"><a
+                    class="text-decoration-none text-light" href="#movies_outer_container">Start Streaming</a>
+            </button>
 
         </div>
         <!-- image carousel -->
@@ -108,8 +109,8 @@
     </div>
 
     <!-- movie cards -->
-    <div class="container">
-        <div class="movie_container d-flex flex-wrap my-4 align-items-stretch justify-content-between border border-3 border-bottom border-danger">
+    <div class="container movies_outer_container" id="movies_outer_container">
+        <div class="movie_container d-flex flex-wrap my-4 align-items-stretch justify-content-between ">
             <div class="card p-0 m-0 border border-0" style="width: 18rem;">
                 <img src="./images/896147.jpg" class="w-100 card-img-top" alt="...">
                 <div class="card-body">
@@ -215,7 +216,76 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- full info page -->
+    <section class="container full_info_container p-5 detail_info text-light bg-info w-50 ">
+        <div class="close_btn bi-x-circle fs-1"></div>
+        <div class="main_info d-flex align-items-center justify-content-start">
+            <div class="poster w-100 m-4">
+                <img src="images/896146.jpg" class="w-100" id=" poster_img ">
+            </div>
+            <div class=" text ">
+                <h4 class=" title "> Avengers </h4>
+                <p class=" date_time "> 2012 . 2hr</p>
+                <div class=" rating bg-secondary d-inline-flex align-items-center px-2  gap-2 rounded-3">
+                    <img src=" ./images/imdb.svg " alt="imdb_logo" class="" style=" width: 30px; ">
+                    <p class=" fw-bold rating_num m-0 ">9.0</p>
+                </div>
+                <div class=" cta_section my-5 gap-3 d-flex">
+                    <button class=" watch_now border fw-bold border-0 p-1 px-2 rounded-3 ">WATCH NOW</button>
+                    <button class=" share border fw-bold border-0 p-1 px-2 rounded-3 ">SHARE</button>
+                </div>
+                <div class=" overview mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, incidunt nisi. Perspiciatis vel est mollitia similique, tempore consequatur velit cum architecto atque nesciunt ad assumenda natus facilis inventore officiis veritatis!</div>
+                <div class=" crew_container d-flex ">
+
+                    <ul class=" crew list-unstyled me-4 fw-bold ">
+                        <li class=" crew_details ">Directed by</li>
+                        <li class=" crew_details ">Direcdsafdsted by</li>
+                        <li class=" crew_details ">Direcd by</li>
+                        <li class=" crew_details ">Directed adsfasby</li>
+                    </ul>
+                    <ul class=" crew list-unstyled ms-4 ">
+                        <li class=" crew_details ">Vimal Kumar</li>
+                        <li class=" crew_details ">Vimal Kumar</li>
+                        <li class=" crew_details ">Vimal Kumar</li>
+                        <li class=" crew_details ">Vimal Kumar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class=" cast_container ">
+            <span class="fs-3 fw-bold">CAST</span>
+            <ul class=" cast d-flex list-unstyled justify-content-between mx-1 gap-1">
+                <li class=" cast_member  ">
+                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
+                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
+                </li>
+                <li class=" cast_member  ">
+                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
+                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
+                </li>
+                <li class=" cast_member  ">
+                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
+                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
+                </li>
+                <li class=" cast_member  ">
+                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
+                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
+                </li>
+                <li class=" cast_member  ">
+                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
+                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
+                </li>
+                <li class=" cast_member  ">
+                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
+                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
+                </li>
+            </ul>
+        </div>
+
+
+    </section>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity=" sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin=" anonymous "></script>
 </body>
 
 </html>

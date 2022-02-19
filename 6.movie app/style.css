@@ -8,6 +8,22 @@ body {
     margin: 0;
 }
 
+.full_info_container {
+    position: relative;
+    border-radius: 30px;
+}
+
+.close_btn {
+    position: absolute;
+    top: 0rem;
+    right: .8rem;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
 .green {
     color: green;
     border: 2px solid green;
