@@ -19,6 +19,19 @@ body {
     right: .8rem;
 }
 
+.card-text {
+    /* height: 100px; */
+    position: relative;
+    /* width: 18rem; */
+    /* max-height: 300px; */
+    transition: 1s all ease-in-out;
+}
+
+.card-text:hover {
+    height: max-content;
+    transition: 1s all ease-in-out;
+}
+
 .card-img-top:hover {
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
