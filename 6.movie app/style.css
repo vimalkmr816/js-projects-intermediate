@@ -8,6 +8,9 @@ body {
     margin: 0;
 }
 
+.close_btn{
+    z-index: 3;
+}
 .full_info_container {
     position: relative;
     border-radius: 30px;
