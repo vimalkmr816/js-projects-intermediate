@@ -1,50 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Rubik', sans-serif;
     margin: 0;
 }
+.poster>img{
 
-.close_btn{
-    z-index: 3;
+    outline: none;
+    border: none;
+    border-radius: 20px;
 }
-.full_info_container {
-    position: relative;
-    border-radius: 30px;
-}
-
-.close_btn {
-    position: absolute;
-    top: 0rem;
-    right: .8rem;
-}
-
-.card-text {
-    /* height: 100px; */
-    position: relative;
-    /* width: 18rem; */
-    /* max-height: 300px; */
-    transition: 1s all ease-in-out;
-}
-
-.card-text:hover {
-    height: max-content;
-    transition: 1s all ease-in-out;
-}
-
 .card-img-top:hover {
     transform: scale(1.05);
-    transition: 0.2s ease-in-out;
+    transition: 0.3s;
+    border-radius: 5px;
 }
 
 .green {
     color: green;
     border: 2px solid green;
 }
-
 .orange {
     color: orange;
     border: 2px solid orange;

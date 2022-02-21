@@ -15,7 +15,7 @@
 
 <body class="bg-dark">
     <!-- navbar -->
-    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-bottom-3 border-bottom-secondary">
+    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-bottom-1 border-secondary">
         <div class="container my-3">
             <a class="navbar-brand" href="#"><img src="./images/output-onlinepngtools.png" width="200px"
                     alt="company_logo"></a>
@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Movies</a>
+                        <a class="nav-link" aria-current="page" href="#movie_cont">Movies</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">TV Shows</a>
@@ -61,18 +61,18 @@
         </div>
     </nav>
     <!-- hero container -->
-    <div class="container p-0 hero_container d-flex align-items-center justify-content-between">
+    <div class=" container p-0 hero_container d-flex align-items-center justify-content-between">
         <div class="hero_text ps-4 ms-4 text-light">
-            <p class="fw-bold fs-1 w-75">Stream Free Movies With Moviefy.</p>
+            <p class="fw-bold fs-3 w-75">Stream Free Movies With Moviefy.</p>
             <p class="w-75">Stop searching for free movie websites and watch Moviefy now.</p>
             <button class="border border-0 bg-success fw-bold  p-3 rounded-3 mt-4 mb-0"><a
-                    class="text-decoration-none text-light" href="#movies_outer_container">Start Streaming</a>
+                    class="text-decoration-none text-light" href="#movie_cont">Start Streaming</a>
             </button>
 
         </div>
         <!-- image carousel -->
-        <div class="w-50 px-0 my-4 mx-0">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="px-0 my-4 mx-0 w-50">
+            <div id="carouselExampleCaptions" class="carousel slide w-75" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -80,28 +80,31 @@
                         aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active ">
-                        <img src="./images/896146.jpg" class="d-block w-100 rounded-3" alt="...">
-                        <div class="carousel-caption d-block d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
+                        <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+                            class="d-block w-100 rounded-3" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="./images/896147.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
+                        <img src="https://image.tmdb.org/t/p/w500/onGdT8sYi89drvSJyEJnft97rOq.jpg"
+                            class="d-block w-100 rounded-3" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="./images/896148.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
+                        <img src="https://image.tmdb.org/t/p/w500/zzXFM4FKDG7l1ufrAkwQYv2xvnh.jpg"
+                            class="d-block w-100 rounded-3" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://image.tmdb.org/t/p/w500/sg4xJaufDiQl7caFEskBtQXfD4x.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://image.tmdb.org/t/p/w500/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg" class="d-block w-100"
+                            alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -118,107 +121,31 @@
         </div>
     </div>
 
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modelId">
-        Launch
-    </button> -->
-
     <!-- Modal -->
-    <!-- <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Body
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- full info page -->
     <section class="container full_info_container ">
-        <!-- <div class="close_btn bi-x-circle fs-1"></div>
-        <div class="main_info d-flex align-items-center justify-content-start">
-            <div class="poster w-100 m-4">
-                <img src="images/896146.jpg" class="w-100" id=" poster_img ">
-            </div>
-            <div class=" text ">
-                <h4 class=" title "> Avengers </h4>
-                <p class=" date_time "> 2012 . 2hr</p>
-                <div class=" rating bg-secondary d-inline-flex align-items-center px-2  gap-2 rounded-3">
-                    <img src=" ./images/imdb.svg " alt="imdb_logo" class="" style=" width: 30px; ">
-                    <p class=" fw-bold rating_num m-0 ">9.0</p>
-                </div>
-                <div class=" cta_section my-5 gap-3 d-flex">
-                    <button class=" watch_now border fw-bold border-0 p-1 px-2 rounded-3 ">WATCH NOW</button>
-                    <button class=" share border fw-bold border-0 p-1 px-2 rounded-3 ">SHARE</button>
-                </div>
-                <div class=" overview mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, incidunt
-                    nisi. Perspiciatis vel est mollitia similique, tempore consequatur velit cum architecto atque
-                    nesciunt ad assumenda natus facilis inventore officiis veritatis!</div>
-                <div class=" crew_container d-flex ">
-
-                    <ul class=" crew list-unstyled me-4 fw-bold ">
-                        <li class=" crew_details ">Directed by</li>
-                        <li class=" crew_details ">Direcdsafdsted by</li>
-                        <li class=" crew_details ">Direcd by</li>
-                        <li class=" crew_details ">Directed adsfasby</li>
-                    </ul>
-                    <ul class=" crew list-unstyled ms-4 ">
-                        <li class=" crew_details ">Vimal Kumar</li>
-                        <li class=" crew_details ">Vimal Kumar</li>
-                        <li class=" crew_details ">Vimal Kumar</li>
-                        <li class=" crew_details ">Vimal Kumar</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class=" cast_container ">
-            <span class="fs-3 fw-bold">CAST</span>
-            <ul class=" cast d-flex list-unstyled justify-content-between mx-1 gap-1">
-                <li class=" cast_member  ">
-                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
-                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
-                </li>
-                <li class=" cast_member  ">
-                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
-                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
-                </li>
-                <li class=" cast_member  ">
-                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
-                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
-                </li>
-                <li class=" cast_member  ">
-                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
-                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
-                </li>
-                <li class=" cast_member  ">
-                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
-                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
-                </li>
-                <li class=" cast_member  ">
-                    <img src="images/imdb.svg" class="rounded-circle w-50 p-1 border border-1 mt-3" alt="">
-                    <span class="fw-bold d-block my-3">Vimal Kumar</span>
-                </li>
-            </ul>
-        </div> -->
-
-
     </section>
+
     <!-- movie cards -->
-    <div class="movie_container d-flex flex-wrap my-4 align-items-stretch justify-content-around container ">
+    <div class="movie_container container d-flex flex-wrap my-4 align-items-stretch justify-content-around container "
+        id="movie_cont">
     </div>
 
 
     <!-- pagination -->
-    <div aria-label="Page navigation example">
+    <!-- <div aria-label="Page navigation example">
         <ul class="pagination pagination-lg justify-content-center">
             <li class="page-item ">
                 <a class="page-link" href="#" aria-label="Previous">
@@ -234,7 +161,7 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
 
     <!-- footer -->
     <footer class="bg-dark text-light">
@@ -268,7 +195,8 @@
             </div>
             <hr class="text-secondary">
             <div class="lower_footer py-3 d-flex align-items-center text-secondary justify-content-around">
-                <p class="m-0"><img src="./images/output-onlinepngtools.png" width="200px" alt="company_logo"></p>
+                <p class="m-0"><img src="./images/output-onlinepngtools.png" width="200px" alt="company_logo">
+                </p>
                 <p class="m-0">&copy; 2022 Moviefy. All rights reserved.</p>
                 <div class="socials d-flex align-items-center justify-content-between gap-3 ">
                     <a href="#" class="text-decoration-none p-2 text-secondary  rounded-3"><i

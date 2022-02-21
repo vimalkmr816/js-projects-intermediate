@@ -12,18 +12,19 @@ const closeBtn = document.getElementById("close_btn")
 const search = document.getElementById("search");
 const card = document.querySelector(".card")
 const fullInfoContainer = document.querySelector(".full_info_container")
-
+const modalBody = document.querySelector(".modal-body")
+const carouselInner = document.querySelector(".carousel-inner")
 getMovies(API_URL);
 function getMovies(url) {
     fetch(url)
         .then((res) => res.json())
         .then((data) => {
-            console.log(data.results);
+            // console.log(data.results);
             showMovies(data.results);
             movieContainer.addEventListener("click", (e) => {
                 // if (!detailSectionOpen) {
                 const cardDiv = e.target.closest("div");
-                console.log(cardDiv);
+                // console.log(cardDiv);
                 showDetails(data.results, cardDiv);
                 // }
             });
@@ -36,22 +37,31 @@ function getMovies(url) {
 function showMovies(data) {
     movieContainer.innerHTML = ``;
     data.forEach((movie) => {
+        // console.log(movie.poster_path);
+
         const { } = movie;
         const movieDiv = document.createElement("div");
         if (movie.poster_path) {
-            // movieDiv.classList.add("movies");
+            movieDiv.classList.add("movies");
+            movieDiv.classList.add("d-flex");
+            movieDiv.classList.add("align-items-stretch");
+            // carouselInner.innerHTML = `
+            // <div class="carousel-item active ">
+            //     <img src= ${IMG_URL + Math.random(movie.poster_path)} class="d-block w-100 rounded-3" alt="...">
+            // </div>`
             movieDiv.innerHTML = ` 
-            <div class="card d-flex align-items-text-center justify-content-evenly flex-column my-4 border-0 shadow" style="width: 18rem;" id="${movie.id
+            <div class="card d-flex justify-content-evenly flex-column my-4 border-0 shadow"  data-bs-toggle="modal"
+            data-bs-target="#modelId" style="width: 18rem;" id="${movie.id
                 }">
                 <img src= ${IMG_URL + movie.poster_path
                 } class=" border border-0 w-100 card-img-top shadow" alt="${movie.title
                 }">
-                <div class="card-body d-flex justify-content-between align-items-center border-bottom border-bottom-3">
+                <div class="card-body d-flex justify-content-between align-items-start ">
                 <div className="movie_title">
                 <h5 class="fw-bold m-0 p-2">${movie.title
                 }</h5>
                 </div>
-                <h5 class="fw-bold px-2 py-1 rounded-3  ${getColor(
+                <h5 class="fw-bold px-4 py-1 rounded-3  ${getColor(
                     movie.vote_average
                 )}">${movie.vote_average}</h5>
                 </div>
@@ -69,56 +79,40 @@ function getColor(value) {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    window.scrollTo({
+        top: 900,
+        left: 900,
+        behavior: 'smooth'
+    })
     const searchTerm = search.value;
     if (searchTerm) getMovies(SEARCH_URL + "&query=" + searchTerm);
     else getMovies(API_URL);
 });
 
 function showDetails(data, card_div) {
-    console.log(closeBtn, "close_btn");
-
-    // detailSectionOpen = true;    
-    const fullDetailInfo = document.createElement("div");
-    fullDetailInfo.classList.add("container");
+    // console.log(closeBtn, "close_btn");
     const cardId = card_div.id;
-    // console.log(cardId);
-    // console.log(data);
-    let detailSectionOpen = false;
     for (let i = 0; i < data.length; i++) {
-        // console.log(detailSectionOpen, "outside");
-        if (cardId == data[i].id && !detailSectionOpen) {
-            movieContainer.innerHTML = ``
-            fullDetailInfo.innerHTML =
-                `<div class="container full_info_container p-5 detail_info text-light bg-info ">
-                <div class=" fs-1 border border-3 border-danger m-4"><button class="bi-x-circle" id="close_btn"></button></div>
-                <div class="main_info border border-3 d-flex justify-content-start">
-                    <div class="poster border border-3 m-4">
-                        <img src=" ${IMG_URL + data[i].poster_path}" class="w- p-4" id=" poster_img ">
-                    </div>
-                    <div class=" text p-4 border border-3 ms-0 m-4">
-                        <h4 class=" title fs-1 fw-bold"> ${data[i].title}</h4>
-                        <p class=" date_time fs-5">Release Date : ${data[i].release_date}</p>
-                        <div class=" rating bg-secondary d-inline-flex align-items-center px-2  gap-2 rounded-3">
-                            <img src=" ./images/imdb.svg " alt="imdb_logo" class="" style=" width: 50px; ">
-                            <p class=" fw-bold rating_num m-0 ">${data[i].vote_average}</p>
+        if (cardId == data[i].id) {
+            modalBody.innerHTML =
+                `<div class="main_info  d-flex justify-content-start align-items-center">
+                        <div class="poster  m-4 w-50">
+                            <img src=" ${IMG_URL + data[i].poster_path}" class="w-100 p-1 shadow-lg" id=" poster_img ">
                         </div>
-                        <div class=" cta_section my-5 gap-3 d-flex">
-                            <button class=" watch_now border fs-3 fw-bold border-0 p-2 px-4 text-light bg-success rounded-3 ">WATCH NOW</button>
-                            <button class=" share border fs-3 fw-bold border-0 p-2 px-4 text-light bg-success rounded-3 ">SHARE</button>
+                        <div class=" text p-4  ms-0 mt-4 w-50 align-self-start">
+                            <h4 class=" title fs-1 fw-bold"> ${data[i].title}</h4>
+                            <p class=" date_time fs-5">Release Date : ${data[i].release_date}</p>
+                            <div class=" rating d-inline-flex align-items-center p-2  rounded-3" style="background-color: ${getColor(data[i].vote_average)};">
+                                <img src=" ./images/imdb.png " alt="imdb_logo" class="me-3 ms-1" style=" width: 40px;">
+                                <p class=" fw-bold rating_num m-0 fs-4 "  >${data[i].vote_average}</p>
+                            </div>
+                            <div class=" cta_section my-5 gap-3 d-flex flex-wrap">
+                                <button class=" watch_now border fw-bold border-0 py-3 px-4 text-light bg-success rounded-3 ">WATCH NOW</button>
+                                <button class=" share border fw-bold border-0 py-3 px-4 text-light bg-success rounded-3 ">SHARE</button>
+                            </div>
+                                <div class=" overview mb-4">${data[i].overview}</div>
                         </div>
-                            <div class=" overview mb-4 fs-4">${data[i].overview}</div>
-                    </div>
-            </div>`;
-            detailSectionOpen = true;
-            // console.log(detailSectionOpen, "inside");
+                    </div>`;
         }
     }
-    window.onload = function () {
-        closeBtn.addEventListener('click', () => {
-            console.log("delete");
-            // showMovies(data);
-        });
-    }
-    fullInfoContainer.append(fullDetailInfo);
 }
